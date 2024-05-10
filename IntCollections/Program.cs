@@ -13,6 +13,28 @@ namespace IntCollections
             HashSet<int> intHashSet = new HashSet<int> (intList);
 
             
+            foreach(int i in intList)
+                Console.Write(i + ",");
+            
+            Console.WriteLine();
+
+            foreach(int i in intStack)
+                Console.Write(i + ",");
+            
+
+            Console.WriteLine();
+
+             foreach(int i in intQueue)
+                Console.Write(i + ",");
+            
+
+            Console.WriteLine();
+
+             foreach(int i in intHashSet)
+                Console.Write(i + ",");
+            
+
+            Console.WriteLine();
         }
     }
 }
