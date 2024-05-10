@@ -21,9 +21,8 @@ namespace FilePower1
 
             Console.WriteLine("Add text to file...");
 
+            
             StreamWriter writer = new StreamWriter(fileName);
-
-
 
                 while(true)
                 {

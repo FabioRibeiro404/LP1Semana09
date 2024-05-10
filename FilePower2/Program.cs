@@ -7,33 +7,29 @@ namespace FilePower2
     {
         static void Main(string[] args)
         {
-            string fileName; 
-            string line;
-
-
             if (args.Length <= 0)
             {
-                Console.WriteLine("Not enough");
+                Console.WriteLine("Not enough arguments provided.");
                 return;
             }
 
-            fileName = args[0];
+            string fileName = args[0];
 
             Console.WriteLine("Add text to file...");
 
-            using StreamWriter writer = new StreamWriter(fileName);
-
-
-
-                while(true)
+            using (StreamWriter writer = new StreamWriter(fileName))
+            {
+                string line;
+                while (true)
                 {
                     line = Console.ReadLine();
 
-                    if(line.Length <= 0)
+                    if (string.IsNullOrEmpty(line))
                         break;
 
                     writer.WriteLine(line);
                 }
+            }
         }
     }
 }
